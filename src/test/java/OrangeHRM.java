@@ -20,7 +20,7 @@ public class OrangeHRM {
 
     @BeforeTest
     public  static void WebSetup() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Jihan SQA\\Desktop\\BSTA\\Selenium_Java_TestNG\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "B:\\AgaileSQA\\Chrome\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get((BaseURL));
@@ -57,8 +57,8 @@ public class OrangeHRM {
     public static void Dashboard() throws Exception {
         MyScreenRecorder.startRecording("");
 
-        //driver.findElement(By.xpath("//b[contains(text(),'Dashboard')]")).click();
-        driver.findElement(By.xpath("//b[contains(text(),'Dashboaghjghjgh]")).click();
+        driver.findElement(By.xpath("//b[contains(text(),'Dashboard')]")).click();
+        //driver.findElement(By.xpath("//b[contains(text(),'Dashboaghjghjgh]")).click();
         Thread.sleep(1000);
         ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,450)", "");
         Thread.sleep(3000);
@@ -69,6 +69,34 @@ public class OrangeHRM {
 
 
     }
+
+    @Test(priority = 2)
+    public static void Assign_Leave() throws Exception {
+
+        driver.findElement(By.xpath("//b[contains(text(),'Dashboard')]")).click();
+        driver.findElement(By.xpath("//span[contains(text(),'Assign Leave')]")).click();
+        Thread.sleep(1000);
+
+    }
+
+    @Test(priority = 3)
+    public static void Leave_List() throws Exception {
+
+        driver.findElement(By.xpath("//b[contains(text(),'Dashboard')]")).click();
+        driver.findElement(By.xpath("//span[contains(text(),'Leave List')]")).click();
+        Thread.sleep(1000);
+
+    }
+
+    @Test(priority = 4)
+    public static void Timesheets() throws Exception {
+
+        driver.findElement(By.xpath("//b[contains(text(),'Dashboard')]")).click();
+        driver.findElement(By.xpath("//b[contains(text(),'Time')]")).click();
+        Thread.sleep(1000);
+
+    }
+
 
 
     @AfterTest

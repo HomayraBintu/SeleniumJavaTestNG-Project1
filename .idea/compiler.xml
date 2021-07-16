@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Selenium-Java-TestNG-Practise" />
         <module name="BSTA-Selenium-Java-TestNG-Practise" />
+        <module name="BSTA-Test1(SeleniumJavaTestNG)" />
+        <module name="BSTA-Selenium-Java-TestNG" />
+        <module name="Selenium-Java-TestNG-Practise" />
+        <module name="Test1-BSTA(SeleniumJavaTestNG)" />
       </profile>
     </annotationProcessing>
   </component>
